@@ -29,11 +29,11 @@ import { SuiteListarPageComponent } from './pages/suite-listar-page/suite-listar
 import { SuiteGerenciarPageComponent } from './pages/suite-gerenciar-page/suite-gerenciar-page.component';
 
 export const firebaseConfig = {
-  apiKey: "AIzaSyCn7vIAMdI_x9eO13QU8IlosGWogRyreoM",
-  authDomain: "planilha-assets.firebaseapp.com",
-  databaseURL: "https://planilha-assets.firebaseio.com",
-  storageBucket: "planilha-assets.appspot.com",
-  messagingSenderId: "977719005198"
+  apiKey: "",
+  authDomain: "",
+  databaseURL: "",
+  storageBucket: "",
+  messagingSenderId: ""
 }
 
 @NgModule({
