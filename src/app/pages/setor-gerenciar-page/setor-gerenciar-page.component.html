@@ -1,0 +1,39 @@
+<app-headbar></app-headbar>
+
+<section class="section">
+  <div class="container">
+    <div class="heading">
+      <h1 class="title">{{titulo}}</h1>
+      <h2 class="subtitle">
+        {{subTitulo}}
+      </h2>
+    </div>
+
+    <br>
+    
+    <div class="columns">
+      <div class="column">
+        <div class="field">
+          <label class="label">Nome</label>
+          <p class="control">
+            <input autofocus [(ngModel)]="setor.nome" class="input" type="text" placeholder="Nome">
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="field is-grouped">
+      <p class="control">
+        <button (click)="salvar()" class="button is-primary">Salvar</button>
+      </p>
+      <p class="control" *ngIf="setor.idSetor != ''">
+        <button (click)="deletar()" class="button is-danger">Excluir</button>
+      </p>
+      <p class="control">
+        <button (click)="voltar()" class="button is-info">Cancelar</button>
+      </p>
+    </div>
+  </div>
+</section>
+
+<app-footer></app-footer>

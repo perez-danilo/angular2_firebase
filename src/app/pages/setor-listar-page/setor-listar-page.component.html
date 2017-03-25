@@ -1,0 +1,52 @@
+<app-headbar></app-headbar>
+
+<section class="section">
+  <div class="container">
+    <div class="heading">
+      <h1 class="title">{{titulo}}</h1>
+      <h2 class="subtitle">
+        {{subTitulo}}
+      </h2>
+    </div>
+  </div>
+  
+  <div class="container">
+    <br>
+    <div class="field is-grouped">
+      <p class="control">
+        <button (click)="novo()" class="button is-link">Adicionar setor</button>
+      </p>
+    </div>
+    <!--<div class="field">
+      <p class="control has-icon">
+        <input [(ngModel)]="textoBusca" (keyup)="buscar()" class="input" type="text" placeholder="Buscar">
+        <span class="icon is-small">
+          <i class="fa fa-search"></i>
+        </span>
+      </p>
+    </div>-->
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th style="width: 10%;"></th>
+          <th>Nome</th>
+        </tr>
+      </thead>
+      <tfoot>
+        <tr>
+          <th></th>
+          <th>Nome</th>
+        </tr>
+      </tfoot>
+      <tbody>
+        <tr *ngFor="let obj of listaSetor | async">
+          <td><button (click)="editar(obj)" class="button is-link">Gerenciar</button></td>
+          <td><strong>{{obj.nome}}</strong></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<app-footer></app-footer>
